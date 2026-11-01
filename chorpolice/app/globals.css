@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --background: #fff9fd;
+  --foreground: #2f1e4f;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-violet-950: #2f1e4f;
+  --color-violet-900: #412467;
+  --color-violet-800: #542f82;
+  --color-violet-700: #68409b;
+  --color-violet-600: #7956a6;
+  --color-violet-500: #9278b7;
+  --color-violet-400: #aa96c7;
+  --color-violet-200: #e6dcf2;
+  --color-violet-100: #f0eafa;
+  --color-pink-800: #9d285d;
+  --color-pink-700: #bc3275;
+  --color-pink-600: #d3448d;
+  --color-pink-500: #e66aa8;
+  --color-pink-400: #f4a1c8;
+  --color-pink-200: #f9d1e4;
+  --color-pink-100: #fce8f2;
+  --font-sans: Arial, "Noto Sans Bengali", "Nirmala UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, "Noto Sans Bengali", "Nirmala UI", sans-serif;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+.page-backdrop {
+  background:
+    radial-gradient(ellipse at 9% 0%, rgba(251, 219, 239, 0.65), transparent 34rem),
+    radial-gradient(ellipse at 96% 28%, rgba(231, 220, 248, 0.62), transparent 34rem),
+    var(--background);
+}
+
+.card-back {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.13) 1px, transparent 0),
+    linear-gradient(135deg, #68409b 0%, #6d3d9d 48%, #c44591 100%);
+  background-size: 15px 15px, 100% 100%;
+}
+
+.card-suit {
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
